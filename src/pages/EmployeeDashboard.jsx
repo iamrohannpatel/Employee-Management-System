@@ -45,8 +45,8 @@ const EmployeeDashboard = () => {
                             <div className="flex justify-between items-center p-4 bg-slate-50 rounded-2xl border border-slate-100/50">
                                 <span className="text-slate-500 font-medium text-sm">Status</span>
                                 <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-wider ${status === 'checked_out' ? 'bg-green-100 text-green-700' :
-                                        status === 'checked_in' ? 'bg-amber-100 text-amber-700' :
-                                            'bg-slate-100 text-slate-600'
+                                    status === 'checked_in' ? 'bg-amber-100 text-amber-700' :
+                                        'bg-slate-100 text-slate-600'
                                     }`}>
                                     {status.replace('_', ' ')}
                                 </span>
@@ -91,15 +91,15 @@ const EmployeeDashboard = () => {
                                     </div>
                                     <div className="grid grid-cols-2 gap-4 text-xs">
                                         <div>
-                                            <p className="text-slate-400 mb-1 flex items-center gap-1">
+                                            <div className="text-slate-400 mb-1 flex items-center gap-1">
                                                 <div className="w-1 h-1 bg-cyan-400 rounded-full" /> In
-                                            </p>
+                                            </div>
                                             <span className="text-slate-900 font-bold">{record.inTime ? new Date(record.inTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '--:--'}</span>
                                         </div>
                                         <div>
-                                            <p className="text-slate-400 mb-1 flex items-center gap-1">
+                                            <div className="text-slate-400 mb-1 flex items-center gap-1">
                                                 <div className="w-1 h-1 bg-pink-400 rounded-full" /> Out
-                                            </p>
+                                            </div>
                                             <span className="text-slate-900 font-bold">{record.outTime ? new Date(record.outTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '--:--'}</span>
                                         </div>
                                     </div>
